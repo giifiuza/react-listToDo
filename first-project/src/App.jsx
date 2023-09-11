@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import './App.css';
+import Container from './Components/Container';
+import Form from './Components/Form';
 
 function App() {
   const [all, setAll] = useState([{
@@ -22,25 +24,29 @@ function App() {
   },
   ]);
 
+  const addTodo = (text, category) => {
+    const newTodo = [
+      ...all ,
+      {
+        id: Math.floor(Math.random() * 10000),
+        text,
+        category,
+        isCompleted: false,
+    },
+  ];
+
+  setAll(newTodo);
+};
 
   return (
     <div className='app'>
       <h1>To do list</h1>
       <div className='todo-list'>
         {all.map((all) => (
-          <div className='todo'>
-            <div className="content">
-              <p>{all.text}</p>
-              <p className="category">({all.category})</p>
-            </div>
-            <div>
-              <button>Completar</button>
-              <button>x</button>
-            </div>
-          </div>
+          <Container key={all.id} all= {all}/>
         ))}
-
       </div>
+      <Form addTodo={addTodo}/>
     </div>
   )
 }

@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  font-family: Inter;
+}
 
 body{
   font-family: Inter;
@@ -14,7 +17,71 @@ body{
   max-width: 600px;
   margin: 0 auto;
   background-color: #ffffff;
-  opacity: 0.7;
+  opacity: 0.8;
   padding: 3em;
   border-radius: 20px;
+}
+
+h1{
+  text-align: center;
+  margin: 0;
+}
+
+h2{
+  margin-bottom: 10px;
+}
+
+p{
+  margin: 10px;
+}
+
+input{
+  box-sizing: border-box;
+}
+
+button{
+  background-color: #333974;
+  color:#fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover{
+  background-color: #202447;
+}
+
+.todo-list{
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #555;
+}
+.complete{
+  background-color: #5cb85c;
+}
+.complete:hover{
+  background-color: #376e37;
+}
+
+.remove{
+  background-color: #d9534f;
+}
+
+.remove:hover{
+  background-color: #8c3532;
+}
+
+.todo-form{
+  padding-bottom: 1.5rem;
+  
+}
+
+input, select{
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  width: 100%;
 }
