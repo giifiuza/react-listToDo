@@ -27,7 +27,7 @@ function App() {
   ]);
 
   const [search, setSearch] = useState("");
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState("all");
   const [sort, setSort] = useState("Asc");
 
 
