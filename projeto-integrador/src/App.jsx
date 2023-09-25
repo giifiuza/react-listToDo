@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Logo from './assets/img/logo.png'
 import Spline from '@splinetool/react-spline';
@@ -17,9 +17,32 @@ function App() {
     { name: 'Company', href: '#' },
   ]
 
+  
+
+
+  const [nome, setNome] = useState('hide')
+
+  const a = (e)=> {
+    console.log(e.target.className)
+
+    if (nome == "hide"){
+      setNome("show")
+    }else{
+      setNome("hide")
+    }
+
+  }
+          
   return (
     <>
-    <div className="bg-white">
+
+      <div className='teste' onClick={a}>
+
+        <h1>Titulo</h1>
+        <h2 className={`   ${nome}`} >Desc</h2>
+
+      </div>
+    {/*<div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
@@ -50,7 +73,9 @@ function App() {
           ))}
         </dl>
       </div>
-    </div>
+          </div>*/}
+
+
     </>
     
   )
